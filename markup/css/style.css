@@ -118,24 +118,7 @@ a{color:#333;text-decoration:none;cursor:pointer;margin:0;padding:0;vertical-ali
 	line-height:18px;
 	font-weight:normal;
 }
-.blog-link{
-	position:absolute;
-	display:block;
-	padding:6px 15px;
-	color:#217cb0;
-	font-size:15px;
-	line-height:17px;
-	font-weight:bold;
-	text-align:center;
-	right:0;
-	bottom:-67px;
-}
-.blog-link span{
-	display:block;
-	font-size:11px;
-	line-height:17px;
-	font-weight:normal;
-}
+.blog-link,
 .mobile-opener{display:none;}
 /* top-image */
 .top-image{
@@ -194,6 +177,51 @@ a{color:#333;text-decoration:none;cursor:pointer;margin:0;padding:0;vertical-ali
 }
 .top-image .txt p span{
 	font-style:normal;
+}
+.top-image .arrow-link{
+	position:absolute;
+	top:0;
+	right:0;
+	width:50%;
+	height:11.7%;
+	z-index:5;
+	color:#217cb0;
+	font-size:16px;
+	line-height:16px;
+	font-weight:bold;
+	background:url(../images/bg-arrow-image.png) no-repeat;
+	background-size:100% 100%;
+	text-align:center;
+	display:flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	align-items: center;
+	overflow:hidden;
+}
+.top-image.inner .arrow-link{
+	height:34.497%;
+}
+.top-image.inner.outline .arrow-link{
+	top:-2px;
+}
+.top-image .arrow-link em{
+	display:block;
+	margin-left:410px;
+	width:100px;
+	text-align:center;
+	font-style:normal;
+}
+.top-image .arrow-link strong{
+	display:block;
+	padding-top:8px;
+}
+.top-image .arrow-link span{
+	display:block;
+	font-size:11px;
+	line-height:17px;
+	font-weight:normal;
 }
 /* content */
 #content.bg-top{
@@ -705,9 +733,6 @@ a{color:#333;text-decoration:none;cursor:pointer;margin:0;padding:0;vertical-ali
 	.menu-list{
 		right:10px;
 	}
-	.blog-link{
-		bottom:-48px;
-	}
 	.top-image .txt{
 		top:40%;
 	}
@@ -733,6 +758,14 @@ a{color:#333;text-decoration:none;cursor:pointer;margin:0;padding:0;vertical-ali
 	.table tr td{
 		padding-left:15px;
 		padding-right:10px;
+	}
+}
+@media screen and (max-width: 1030px) {
+	.top-image .arrow-link{
+		justify-content: flex-end;
+	}
+	.top-image .arrow-link em{
+		margin:0;
 	}
 }
 /* mobile view */
@@ -850,6 +883,7 @@ a{color:#333;text-decoration:none;cursor:pointer;margin:0;padding:0;vertical-ali
 	.menu-list a,
 	.blog-link,
 	.menu-soc a{
+		display:block;
 		padding:12px 20px 12px 8px;
 		font-size:11px;
 		line-height:16px;
@@ -906,6 +940,7 @@ a{color:#333;text-decoration:none;cursor:pointer;margin:0;padding:0;vertical-ali
 		line-height:22px;
 		letter-spacing:3px;
 	}
+	.top-image .arrow-link{display:none;}
 	.recruit,
 	.recruit .center-holder{
 		background:#bde3ea;
