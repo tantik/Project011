@@ -128,9 +128,36 @@ body{
 	overflow:hidden;
 	position:relative;
 }
+.top-image:before{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	width: 104%;
+	height: 100%;
+	margin: 0 -2% 0;
+	background: #8ae3f6;
+	-webkit-transform-origin: right center;
+	-ms-transform-origin: right center;
+	transform-origin: right center;
+	-webkit-transform: rotate(-3.5deg);
+	-ms-transform: rotate(-3.5deg);
+	transform: rotate(-3.5deg);
+	z-index:1;
+}
 .top-image img{
 	display:block;
-	width:100%;
+	position:relative;
+	width:104%;
+	height:auto;
+	margin:0 -2% 0; 
+	-webkit-transform-origin: left center;
+	-ms-transform-origin: left center;
+	transform-origin: left center;
+	-webkit-transform: rotate(3.5deg);
+	-ms-transform: rotate(3.5deg);
+	transform: rotate(3.5deg);
+	z-index:2;
 }
 .top-image h2{
 	margin:0;
@@ -159,6 +186,7 @@ body{
 	font-style:italic;
 	letter-spacing:6px;
 	text-shadow:0 0 7px rgba(255,255,255,0.4);
+	z-index:5;
 }
 .top-image .txt{
 	position:absolute;
@@ -171,6 +199,7 @@ body{
 	line-height:22px;
 	font-style:italic;
 	font-weight:bold;
+	z-index:5;
 }
 .top-image .txt h3{
 	font-size:48px;
@@ -187,12 +216,11 @@ body{
 	right:0;
 	width:50%;
 	height:11.7%;
-	z-index:5;
+	z-index:10;
 	color:#217cb0;
 	font-size:16px;
 	line-height:16px;
 	font-weight:bold;
-	background:url(../images/bg-arrow-image.png) no-repeat;
 	background-size:100% 100%;
 	text-align:center;
 	display:flex;
@@ -204,7 +232,7 @@ body{
 	overflow:hidden;
 }
 .top-image.inner .arrow-link{
-	height:34.497%;
+	height:45%;
 }
 .top-image.inner.outline .arrow-link{
 	top:-2px;
@@ -485,6 +513,7 @@ body{
 .interview-info .num-box.box1{
 	padding-bottom:256px;
 	background:url(../images/bg1-interview-info.jpg) no-repeat 0 100%;
+	background-size:100% auto;
 }
 .interview-info .num-box.box2{
 	padding-bottom:25px;
@@ -534,6 +563,7 @@ body{
 	padding-top:120px;
 	padding-bottom:102px;
 	background:url(../images/bg2-interview-info.jpg) no-repeat 0 100%;
+	background-size:100% auto;
 }
 .interview-info .num-box.box3 h3{
 	padding-top:0;
@@ -740,7 +770,7 @@ body{
 		right:10px;
 	}
 	.top-image .txt{
-		top:40%;
+		top:34%;
 	}
 	.interview-info .title-box .ttl{
 		top:28%;
