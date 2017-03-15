@@ -865,6 +865,19 @@ a{color:#333;text-decoration:none;cursor:pointer;margin:0;padding:0;vertical-ali
 		z-index:990;
 		text-align:left;
 		background:#fff;
+		display:none;
+	}
+	.menu .cloze-menu{
+		border:1px solid #35b0ff;
+		background:#eef9fe;
+		text-align:center;
+		font-size:12px;
+		font-weight:bold;
+		line-height:30px;
+		color:#35b0ff;
+		margin:0 auto 10px;
+		width:80px;
+		display:block;
 	}
 	.menu-list{
 		position:relative;
